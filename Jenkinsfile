@@ -17,5 +17,14 @@ pipeline {
                 sh 'node --version'
             }
         }
+        stage('tomas73') {
+            agent {
+                docker { image 'tomas73/cheers2019' }
+            }
+            steps {
+                sh 'bash --version'
+            }
+        }
+
     }
 }
